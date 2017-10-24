@@ -1,0 +1,144 @@
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+  font-family: "Open Sans";
+}
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.container:before,
+.container:after {
+  content: " ";
+  display: table;
+}
+.container:after {
+  clear: both;
+}
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+.container-fluid {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.container-fluid:before,
+.container-fluid:after {
+  content: " ";
+  display: table;
+}
+.container-fluid:after {
+  clear: both;
+}
+.half {
+  box-sizing: border-box;
+  position: relative;
+  min-height: 1px;
+}
+@media (min-width: 992px) {
+  .half {
+    width: 50%;
+    float: left;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .container .half:first-child {
+    padding-left: 0;
+  }
+  .container .half:last-child {
+    padding-right: 0;
+  }
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "klavika-web", "Open Sans", "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "klavika-web";
+  src: url("./l.woff2") format("woff2");
+  font-weight: 700;
+  /* font-style */
+}
+@font-face {
+  font-family: "klavika-web";
+  src: url("./l1.woff2") format("woff2");
+  font-weight: 600;
+  /* font-style */
+}
+
+@font-face {
+  font-family: "klavika-web";
+  src: url("./l2.woff2") format("woff2");
+  font-weight: 400;
+  /* font-style */
+}
+
+@font-face {
+  font-family: "klavika-web";
+  src: url("./l3.woff2") format("woff2");
+  font-weight: 300;
+  /* font-style */
+}
+
+.button.primary {
+  background: #f25f3f;
+  border: 1px solid #eb1919;
+  color: #ffffff;
+}
+
+.button {
+  background: #ffffff;
+  border: 1px solid #7b8a8e;
+  box-shadow: 3px 4px 0 rgba(0, 0, 0, 0.1);
+  color: #7b8a8e;
+  display: inline-block;
+  font-family: "klavika-web", Helvetica, sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 4px;
+  padding: 10px 30px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.button:hover {
+  background: #7b8a8e;
+  border: 1px solid #7b8a8e;
+  color: #ffffff;
+}
+.button.primary:hover {
+  background: #df4a2e;
+  border: 1px solid #eb1919;
+}
+
+a {
+  color: #337ab7;
+  text-decoration: none;
+}

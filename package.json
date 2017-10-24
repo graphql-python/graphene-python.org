@@ -1,0 +1,40 @@
+{
+  "name": "gatsby-starter-default",
+  "description": "Gatsby default starter",
+  "version": "1.0.0",
+  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "dependencies": {
+    "@jacobmischka/gatsby-plugin-react-svg": "git+https://github.com/jacobmischka/gatsby-plugin-react-svg.git",
+    "gatsby": "^1.9.73",
+    "gatsby-link": "^1.6.22",
+    "gatsby-plugin-react-helmet": "^1.0.8",
+    "gatsby-plugin-styled-jsx": "^1.0.11",
+    "lost": "8.2.0",
+    "postcss-cssnext": "^3.0.2",
+    "postcss-import": "^11.0.0",
+    "postcss-loader": "^2.0.8",
+    "postcss-nested": "2.1.2",
+    "rucksack-css": "^1.0.2",
+    "styled-jsx-plugin-postcss": "0.1.0"
+  },
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "MIT",
+  "main": "n/a",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js'",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "prettier": "^1.7.4"
+  },
+  "postcss": {
+    "plugins": {
+      "lost": {},
+      "postcss-nested": {}
+    }
+  }
+}
