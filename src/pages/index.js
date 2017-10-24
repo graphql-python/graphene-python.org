@@ -9,7 +9,7 @@ import MozillaLogo from "./logos/mozilla.svg";
 import Puzzle from "./puzzle.svg";
 
 const onSelectorChange = () => {
-  document.location = "http://google.com/";
+  document.location = "http://graphene-js.org/";
 };
 
 const IndexPage = () => (
