@@ -96,7 +96,7 @@ schema.<b>execute</b>('''
 
           <p>
             We offer integrations with different frameworks that will get you up
-            to speed in the blink on an eye.<br />This integrations include:
+            to speed in the blink of an eye.<br />This integrations include:
             <ul>
               <li>
                 <b>Django</b>: Graphene-Django
