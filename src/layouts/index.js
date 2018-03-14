@@ -13,9 +13,9 @@ const Header = ({ docs }) => (
   <div>
     <header className="graphene-header">
       <div className="container">
-        <Link to="http://graphene-python.org/">
+        <a href="http://graphene-python.org/">
           <GrapheneLogo className="graphene-logo" />
-        </Link>
+        </a>
         <a className="tagline" href="//graphene.tools/">
           Learn how Graphene-Python fits into the <b>Graphene family</b>
           <Arrow className="arrow" />
