@@ -84,7 +84,7 @@ p {
 }
 .sphinxsidebar ul > li {
   font-size: 15px;
-  color: #d5236f;
+  color: #e14b2e;
   letter-spacing: 0.2px;
 }
 .sphinxsidebar ul > li > ul {
@@ -101,14 +101,14 @@ p {
   font-weight: 400;
 }
 .sphinxsidebar .sphinxsidebarwrapper li.current > a {
-  color: #d5236f;
+  color: #e14b2e;
   font-weight: 500;
 }
 .sphinxsidebar .sphinxsidebarwrapper li.current a:hover {
-  color: #d5236f;
+  color: #e14b2e;
 }
 .sphinxsidebar .sphinxsidebarwrapper li.current > ul {
-  border-left: 2px solid #d5236f;
+  border-left: 2px solid #e14b2e;
 }
 
 .wy-breadcrumbs {
