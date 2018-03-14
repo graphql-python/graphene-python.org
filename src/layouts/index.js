@@ -5,14 +5,15 @@ import Helmet from "react-helmet";
 import GrapheneLogo from "./graphene-logo.svg";
 import Arrow from "./arrow.svg";
 import LogoOnWhite from "./logo-on-white.svg";
+import GrapheneLogoWhite from "./graphene-logo-white.svg";
 
 import "./index.css";
 
-const Header = () => (
+const Header = ({ docs }) => (
   <div>
     <header className="graphene-header">
       <div className="container">
-        <Link to="/">
+        <Link to="http://graphene-python.org/">
           <GrapheneLogo className="graphene-logo" />
         </Link>
         <a className="tagline" href="//graphene.tools/">
@@ -21,16 +22,20 @@ const Header = () => (
         </a>
       </div>
     </header>
-    <header className="container navbar-header">
-      <Link to="/">
-        <LogoOnWhite />
-      </Link>
-      <nav>
-        <a href="//docs.graphene-python.org/">Documentation</a>
-        <a href="/blog">Blog</a>
-        <a href="https://github.com/graphql-python/graphene">Github</a>
-      </nav>
+    <header
+      className={`navbar-header  ${docs ? "navbar-header-contrast" : ""}`}
+    >
+      <div className="container">
+        <a href="http://graphene-python.org/" className="logo-link">
+          {docs ? <GrapheneLogoWhite /> : <LogoOnWhite />}
+        </a>
+        <nav>
+          <a href="http://docs.graphene-python.org/">Documentation</a>
+          <a href="https://github.com/graphql-python/graphene">Github</a>
+        </nav>
+      </div>
     </header>
+
     <style jsx>{`
       .graphene-header {
         background: #000000;
@@ -72,11 +77,18 @@ const Header = () => (
         position: relative;
         top: 2px;
       }
+      .navbar-header-contrast {
+        background-image: linear-gradient(-180deg, #f67049 0%, #e14b2e 100%);
+      }
+
       .navbar-header {
         height: 94px;
-        align-items: center;
-        display: flex;
       }
+      .navbar-header :global(.container) {
+        display: flex;
+        align-items: center;
+      }
+
       .navbar-header nav {
         height: 100%;
         display: block;
@@ -99,24 +111,34 @@ const Header = () => (
       .navbar-header nav a:hover {
         color: black;
       }
+      .navbar-header-contrast nav a {
+        color: white;
+      }
+      .navbar-header-contrast nav a:hover {
+        color: #eee;
+      }
+
       @import url("https://fonts.googleapis.com/css?family=Fira+Mono|Open+Sans:400,600");
     `}</style>
   </div>
 );
 
-const TemplateWrapper = ({ children }) => (
-  <div>
-    <Helmet
-      title="Graphene-Python"
-      meta={[
-        { name: "description", content: "Graphene framework for Python" },
-        { name: "keywords", content: "graphene, graphql, python, framework" }
-      ]}
-    />
-    <Header />
-    <div>{children()}</div>
-  </div>
-);
+const TemplateWrapper = ({ children, ...otherProps }) => {
+  const docs = otherProps.location.pathname.indexOf("/docs") > -1;
+  return (
+    <div>
+      <Helmet
+        title="Graphene-Python"
+        meta={[
+          { name: "description", content: "Graphene framework for Python" },
+          { name: "keywords", content: "graphene, graphql, python, framework" }
+        ]}
+      />
+      <Header docs={docs} />
+      <div>{children()}</div>
+    </div>
+  );
+};
 
 TemplateWrapper.propTypes = {
   children: PropTypes.func

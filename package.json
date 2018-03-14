@@ -4,7 +4,8 @@
   "version": "1.0.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
-    "@jacobmischka/gatsby-plugin-react-svg": "git+https://github.com/jacobmischka/gatsby-plugin-react-svg.git",
+    "@jacobmischka/gatsby-plugin-react-svg":
+      "git+https://github.com/jacobmischka/gatsby-plugin-react-svg.git",
     "gatsby": "^1.9.73",
     "gatsby-link": "^1.6.22",
     "gatsby-plugin-react-helmet": "^1.0.8",
@@ -17,15 +18,17 @@
     "rucksack-css": "^1.0.2",
     "styled-jsx-plugin-postcss": "0.1.0"
   },
-  "keywords": [
-    "gatsby"
-  ],
+  "keywords": ["gatsby"],
   "license": "MIT",
   "main": "n/a",
   "scripts": {
-    "build": "gatsby build",
+    "clean": "rm -rf ./public",
+    "create-sphinx-theme": "./scripts/create_package",
+    "build":
+      "yarn clean && gatsby build --prefix-paths && ./scripts/replace && yarn create-sphinx-theme",
     "develop": "gatsby develop",
-    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js'",
+    "format":
+      "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {

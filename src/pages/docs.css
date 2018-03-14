@@ -1,0 +1,205 @@
+.docs-container {
+  margin-top: 54px;
+  display: flex;
+  margin-bottom: 80px;
+  color: #333;
+}
+p {
+  line-height: 1.5;
+}
+.callout a {
+  color: white;
+}
+.docs-side-nav {
+  width: 25%;
+  margin-right: 40px;
+  min-width: 200px;
+  max-width: 260px;
+}
+.docs-main {
+  flex: 1;
+}
+.sphinxsidebarwrapper ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.sphinxsidebarwrapperlinks {
+  margin-top: 24px;
+}
+.sphinxsidebarwrapperlinks a {
+  font-size: 16px;
+  letter-spacing: 0;
+  color: #333;
+}
+.sphinxsidebarwrapperlinks a.current {
+  font-weight: bold;
+  color: #e14b2e;
+}
+
+.documentwrapper h1,
+.documentwrapper h2,
+.documentwrapper h3,
+.documentwrapper h4,
+.documentwrapper h5 {
+  font-weight: 500;
+}
+.documentwrapper h1 {
+  font-size: 36px;
+}
+.documentwrapper h2 {
+  font-size: 30px;
+}
+.documentwrapper h3 {
+  font-size: 26px;
+}
+.documentwrapper h4 {
+  font-size: 22px;
+}
+.headerlink {
+  display: none;
+}
+.documentwrapper h1:hover .headerlink,
+.documentwrapper h2:hover .headerlink,
+.documentwrapper h3:hover .headerlink,
+.documentwrapper h4:hover .headerlink,
+.documentwrapper h5:hover .headerlink {
+  margin-left: 8px;
+  display: inline;
+}
+.go-buttons {
+  margin-top: 60px;
+}
+.go-buttons .go-previous {
+  float: left;
+}
+.go-buttons .go-next {
+  float: right;
+}
+.sphinxsidebar li {
+  padding: 6px 0;
+}
+.sphinxsidebar ul {
+  list-style: none;
+}
+.sphinxsidebar ul > li {
+  font-size: 15px;
+  color: #d5236f;
+  letter-spacing: 0.2px;
+}
+.sphinxsidebar ul > li > ul {
+  margin-top: 10px;
+  border-left: 2px solid #999;
+  padding-left: 16px;
+}
+.sphinxsidebar ul > li > ul > li {
+  font-size: 14px;
+  font-weight: 400;
+  color: #343434;
+}
+.sphinxsidebar .toctree-l1 > a {
+  font-weight: 400;
+}
+.sphinxsidebar .sphinxsidebarwrapper li.current > a {
+  color: #d5236f;
+  font-weight: 500;
+}
+.sphinxsidebar .sphinxsidebarwrapper li.current a:hover {
+  color: #d5236f;
+}
+.sphinxsidebar .sphinxsidebarwrapper li.current > ul {
+  border-left: 2px solid #d5236f;
+}
+
+.wy-breadcrumbs {
+  list-style: none;
+}
+.wy-breadcrumbs li {
+  display: inline-block;
+  margin-right: 5px;
+  color: #606060;
+}
+
+.wy-breadcrumbs li.wy-breadcrumbs-aside {
+  float: right;
+}
+
+.wy-breadcrumbs li a {
+  display: inline-block;
+  padding: 5px;
+  color: #606060;
+}
+
+.wy-breadcrumbs li a:first-child {
+  padding-left: 0;
+}
+
+.wy-breadcrumbs li code,
+.wy-breadcrumbs li .rst-content tt,
+.rst-content .wy-breadcrumbs li tt {
+  padding: 5px;
+  border: none;
+  background: none;
+}
+
+.wy-breadcrumbs li code.literal,
+.wy-breadcrumbs li .rst-content tt.literal,
+.rst-content .wy-breadcrumbs li tt.literal {
+  color: #404040;
+}
+
+.fa-github {
+  color: #404040;
+}
+
+.wy-breadcrumbs-extra {
+  margin-bottom: 0;
+  color: #b3b3b3;
+  font-size: 80%;
+  display: inline-block;
+}
+
+.section ul,
+.toctree-wrapper ul,
+article ul {
+  list-style: disc;
+  line-height: 24px;
+  margin-bottom: 24px;
+}
+
+.section ul li,
+.toctree-wrapper ul li,
+article ul li {
+  list-style: disc;
+  margin-left: 24px;
+}
+
+.section ul li p:last-child,
+.toctree-wrapper ul li p:last-child,
+article ul li p:last-child {
+  margin-bottom: 0;
+}
+
+.section ul li ul,
+.toctree-wrapper ul li ul,
+article ul li ul {
+  margin-bottom: 0;
+}
+
+.section ul li li,
+.toctree-wrapper ul li li,
+article ul li li {
+  list-style: circle;
+}
+
+.section ul li li li,
+.toctree-wrapper ul li li li,
+article ul li li li {
+  list-style: square;
+}
+
+.section ul li ol li,
+.toctree-wrapper ul li ol li,
+article ul li ol li {
+  list-style: decimal;
+}

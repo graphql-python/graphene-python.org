@@ -29,7 +29,9 @@ const IndexPage = () => (
       <a className="button primary" href="http://docs.graphene-python.org">
         Get Started
       </a>
-      <a className="button">Download 2.0</a>
+      <a className="button" href="https://pypi.python.org/pypi/graphene">
+        Download 2.0
+      </a>
     </div>
 
     <section className="main">
@@ -99,13 +101,22 @@ schema.<b>execute</b>('''
             to speed in the blink of an eye.<br />This integrations include:
             <ul>
               <li>
-                <b>Django</b>: Graphene-Django
+                <b>Django</b>:{" "}
+                <a href="http://docs.graphene-python.org/projects/django/en/latest/">
+                  Graphene-Django
+                </a>
               </li>
               <li>
-                <b>SQLAlchemy</b>: Graphene-SQLAlchemy
+                <b>SQLAlchemy</b>:{" "}
+                <a href="http://docs.graphene-python.org/projects/sqlalchemy/en/latest/">
+                  Graphene-SQLAlchemy
+                </a>
               </li>
               <li>
-                <b>Google App Engine</b>: Graphene-GAE
+                <b>Google App Engine</b>:{" "}
+                <a href="http://docs.graphene-python.org/projects/gae/en/latest/">
+                  Graphene-GAE
+                </a>
               </li>
             </ul>
           </p>
@@ -132,23 +143,6 @@ schema.<b>execute</b>('''
     </section>
     <style jsx>{`
       /* Rectangle 5: */
-      .callout {
-        background: #000000;
-        color: #ffffff;
-        display: inline-block;
-        font-family: "klavika-web", Helvetica, sans-serif;
-        font-size: 18px;
-        font-weight: 400;
-        line-height: 1;
-        margin: 0;
-        padding: 5px;
-        letter-spacing: 0.05em;
-        text-transform: uppercase;
-      }
-      .callout.inverse {
-        color: #000000;
-        background: #ffffff;
-      }
       :global(.puzzle) {
         margin: 100px;
       }

@@ -1,0 +1,16 @@
+cp public/docs/index.html sphinx_theme/sphinx_graphene_theme/layout.html
+cd sphinx_theme
+zip -r sphinx_graphene_theme.zip .
+cp sphinx_graphene_theme.zip ../public
+
+# Ping read the docs to rebuild the graphene-python website
+curl -X POST -d "token=cb70e0ca4aaf808df8d07deb3d9619c2e128212b" https://readthedocs.org/api/v2/webhook/graphene-python/29558/
+
+# Ping read the docs to rebuild the graphene-django website
+curl -X POST -d "token=e9cf13643c471cfb8cdebf8b0bd121bbb40b5f97" https://readthedocs.org/api/v2/webhook/graphene-django/29559/
+
+# Ping read the docs to rebuild the graphene-sqlalchemy website
+curl -X POST -d "token=6f1fb097f31454e13e63d8ab62512b3da51be147" https://readthedocs.org/api/v2/webhook/graphene-sqlalchemy/29561/
+
+# Ping read the docs to rebuild the graphene-gae website
+curl -X POST -d "token=d35f550310f2f068156b1abc702f6ab91dc88e71" https://readthedocs.org/api/v2/webhook/graphene-gae/29562/
