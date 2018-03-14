@@ -1,13 +1,40 @@
-# gatsby-starter-default
-The default Gatsby starter
+# Graphene Docs
 
-For an overview of the project structure please refer to the [Gatsby documentation - Building with Components](https://www.gatsbyjs.org/docs/building-with-components/)
+Graphene docs are powered by [gatsby](https://github.com/gatsbyjs/gatsby).
 
-Install this starter (assuming Gatsby is installed) by running from your CLI:
+
+## Installation
+
+For running locally this docs. You have to execute
+```bash
+yarn
 ```
-gatsby new gatsby-example-site
+
+And then
+
+```bash
+yarn develop
 ```
 
-## Deploy
+## Build
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default)
+For building the docs into the `public` dir, just run:
+
+```bash
+yarn build
+```
+
+## Playground (temporaly disabled)
+
+If you want to have the playground running too, just execute
+
+```
+./playground/graphene-js/build.sh
+```
+
+This command will clone the [pypyjs-release-nojit](https://github.com/pypyjs/pypyjs-release-nojit) repo, update it with the latest graphene, graphql-core and graphql-relay code, and make it available for the `/playground` view in the docs.
+
+
+## Automation
+
+Each time we modify the docs in the `master` branch Netlify job runs and updates the website, so [Graphene's website](http://graphene-python.org) have always the latest layout.
