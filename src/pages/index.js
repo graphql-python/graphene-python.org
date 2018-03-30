@@ -41,8 +41,8 @@ const IndexPage = () => (
           <h1>Simple yet Powerful</h1>
           <p>
             Graphene-Python is a library for building GraphQL APIs in Python
-            easily, it's main goal is to provide a simple but extendable API for
-            making developers life easier.
+            easily, its main goal is to provide a simple but extendable API for
+            making developers' lives easier.
           </p>
           <p>
             But, what is GraphQL? GraphQL is a data query language developed
