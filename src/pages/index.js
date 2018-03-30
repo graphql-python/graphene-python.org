@@ -30,7 +30,7 @@ const IndexPage = () => (
         Get Started
       </a>
       <a className="button" href="https://pypi.python.org/pypi/graphene">
-        Download 2.0
+        Download 2.1
       </a>
     </div>
 
