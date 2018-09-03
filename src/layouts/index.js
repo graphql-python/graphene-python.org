@@ -227,53 +227,6 @@ class Header extends React.Component {
               width: 120px;
             }
           }
-          @media (max-width: 768px) {
-            :global(#search-docs) {
-              display: none;
-            }
-            .mobile-menu {
-              display: block;
-              position: absolute;
-              right: 20px;
-              font-size: 20px;
-            }
-            .tagline .hide-mobile {
-              display: none;
-            }
-            .navbar-header nav {
-              height: auto;
-              position: fixed;
-              top: 0;
-              bottom: 0;
-              right: 0;
-              width: 280px;
-              display: block;
-              background: white;
-              z-index: 10000;
-              transform: translateX(305px);
-              box-shadow: 0px 2px 25px rgba(0, 0, 0, 0.15);
-              transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1);
-            }
-            .mobile-menu {
-              display: block;
-            }
-            #menu:target ~ .background-mobile-menu {
-              display: block;
-              cursor: default;
-            }
-            #menu:target ~ nav {
-              transform: translateX(0px);
-            }
-            .navbar-header :global(.nav-link) {
-              height: auto;
-              display: block;
-              width: 100%;
-              text-align: center;
-              padding: 0;
-              margin: 18px 0;
-              line-height: 20px;
-            }
-          }
           :global(.nav-link-active) {
             color: black;
           }
@@ -299,6 +252,64 @@ class Header extends React.Component {
           }
           .navbar-header-contrast :global(.nav-link):hover {
             color: #eee;
+          }
+
+          @media (max-width: 768px) {
+            :global(#search-docs) {
+              display: none;
+            }
+            .mobile-menu {
+              display: block;
+              position: absolute;
+              right: 20px;
+              font-size: 20px;
+            }
+            .navbar-header-contrast .mobile-menu {
+              color: white;
+            }
+            .tagline .hide-mobile {
+              display: none;
+            }
+            .navbar-header nav {
+              height: auto;
+              color: black;
+              position: fixed;
+              top: 0;
+              bottom: 0;
+              right: 0;
+              width: 280px;
+              display: block;
+              background: white;
+              z-index: 10000;
+              transform: translateX(305px);
+              box-shadow: 0px 2px 25px rgba(0, 0, 0, 0.15);
+              transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1);
+            }
+            .navbar-header-contrast :global(.nav-link) {
+              color: black;
+            }
+            .navbar-header-contrast :global(.nav-link):hover {
+              color: #333;
+            }
+            .mobile-menu {
+              display: block;
+            }
+            #menu:target ~ .background-mobile-menu {
+              display: block;
+              cursor: default;
+            }
+            #menu:target ~ nav {
+              transform: translateX(0px);
+            }
+            .navbar-header :global(.nav-link) {
+              height: auto;
+              display: block;
+              width: 100%;
+              text-align: center;
+              padding: 0;
+              margin: 18px 0;
+              line-height: 20px;
+            }
           }
 
           @import url("https://fonts.googleapis.com/css?family=Fira+Mono|Open+Sans:400,600");
