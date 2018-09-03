@@ -6,6 +6,7 @@ import GrapheneLogo from "./graphene-logo.svg";
 import Arrow from "./arrow.svg";
 import LogoOnWhite from "./logo-on-white.svg";
 import GrapheneLogoWhite from "./graphene-logo-white.svg";
+import { FaGithub } from "react-icons/fa";
 
 import docsearch from "docsearch.js/dist/cdn/docsearch.min";
 
@@ -49,9 +50,25 @@ class Header extends React.Component {
                 type="text"
                 placeholder="Search the docs..."
               />
-              <a href="http://docs.graphene-python.org/">Documentation</a>
-              <a href="/team">Team</a>
-              <a href="https://github.com/graphql-python/graphene">Github</a>
+              <a
+                href="http://docs.graphene-python.org/"
+                className={`nav-link ${docs ? "nav-link-active" : ""}`}
+              >
+                Documentation
+              </a>
+              <Link
+                to="/team"
+                className="nav-link"
+                activeClassName="nav-link-active"
+              >
+                Team
+              </Link>
+              <a
+                className="nav-link"
+                href="https://github.com/graphql-python/graphene"
+              >
+                <FaGithub /> Github
+              </a>
             </nav>
           </div>
         </header>
@@ -148,7 +165,7 @@ class Header extends React.Component {
             display: block;
             margin-left: auto;
           }
-          .navbar-header nav a {
+          :global(.nav-link) {
             height: 100%;
             align-items: center;
             color: #555555;
@@ -161,14 +178,32 @@ class Header extends React.Component {
             margin: 0;
             text-decoration: none;
             font-weight: 600;
+            position: relative;
           }
-          .navbar-header nav a:hover {
+          :global(.nav-link-active) {
             color: black;
           }
-          .navbar-header-contrast nav a {
+          :global(.nav-link-active):before {
+            position: absolute;
+            content: "";
+            bottom: -10px;
+            width: 4px;
+            height: 4px;
+            left: 50%;
+            margin-left: -2px;
+            border-radius: 2px;
+            background: black;
+          }
+          .navbar-header-contrast :global(.nav-link-active):before {
+            background: white;
+          }
+          :global(.nav-link):hover {
+            color: black;
+          }
+          .navbar-header-contrast :global(.nav-link) {
             color: white;
           }
-          .navbar-header-contrast nav a:hover {
+          .navbar-header-contrast :global(.nav-link):hover {
             color: #eee;
           }
 

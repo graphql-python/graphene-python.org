@@ -7,19 +7,26 @@ body {
   margin: 0;
   font-family: "Open Sans";
 }
-.container {
+.container,
+.small-container {
   margin-right: auto;
   margin-left: auto;
   padding-left: 15px;
   padding-right: 15px;
 }
 .container:before,
-.container:after {
+.container:after,
+.small-container:before,
+.small-container:after {
   content: " ";
   display: table;
 }
-.container:after {
+.container:after,
+.small-container:after {
   clear: both;
+}
+.small-container {
+  max-width: 600px;
 }
 @media (min-width: 768px) {
   .container {
