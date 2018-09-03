@@ -129,6 +129,7 @@ class Header extends React.Component {
             margin-bottom: 0;
             margin-top: 0;
             text-transform: none;
+            font-weight: normal;
           }
           .tagline b {
             font-weight: 400;

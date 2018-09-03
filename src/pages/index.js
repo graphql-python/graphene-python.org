@@ -48,8 +48,8 @@ const IndexPage = () => (
           Every single apportation helps us make Graphene long-term financially
           sustainable.
         </p>
-        <Link className="button primary" to="/support">
-          Become a Sponsor!
+        <Link className="button" to="/support">
+          Become a Sponsor! 😊
         </Link>
       </div>
     </section>
@@ -201,7 +201,7 @@ schema.<b>execute</b>('''
 
       .sponsors h2 {
         color: #555;
-        font-weight: 200;
+        font-weight: 400;
       }
       .sponsors p {
         font-size: 14px;

@@ -28,6 +28,16 @@ body {
 .small-container {
   max-width: 600px;
 }
+.small-container h1,
+.small-container h2,
+.small-container h3,
+.small-container h4,
+.small-container h5,
+.small-container h6 {
+  color: #555;
+  font-weight: 400;
+  margin: 1.25em 0 0.75em;
+}
 @media (min-width: 768px) {
   .container {
     width: 750px;
