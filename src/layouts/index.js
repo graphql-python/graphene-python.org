@@ -6,7 +6,7 @@ import GrapheneLogo from "./graphene-logo.svg";
 import Arrow from "./arrow.svg";
 import LogoOnWhite from "./logo-on-white.svg";
 import GrapheneLogoWhite from "./graphene-logo-white.svg";
-import { FaGithub } from "react-icons/fa";
+import { FaGithub, FaBars } from "react-icons/fa";
 
 import docsearch from "docsearch.js/dist/cdn/docsearch.min";
 
@@ -28,11 +28,15 @@ class Header extends React.Component {
       <div>
         <header className="graphene-header">
           <div className="container">
-            <a href="http://graphene-python.org/">
+            <a href="https://graphene-python.org/">
               <GrapheneLogo className="graphene-logo" />
             </a>
             <a className="tagline" href="//graphene.tools/">
-              Learn how Graphene-Python fits into the <b>Graphene family</b>
+              Learn{" "}
+              <span className="hide-mobile">
+                how Graphene-Python fits into
+              </span>{" "}
+              the <b>Graphene family</b>
               <Arrow className="arrow" />
             </a>
           </div>
@@ -41,9 +45,14 @@ class Header extends React.Component {
           className={`navbar-header  ${docs ? "navbar-header-contrast" : ""}`}
         >
           <div className="container">
-            <a href="http://graphene-python.org/" className="logo-link">
+            <a href="https://graphene-python.org/" className="logo-link">
               {docs ? <GrapheneLogoWhite /> : <LogoOnWhite />}
             </a>
+            <a id="menu" />
+            <a href="#menu" className="mobile-menu">
+              <FaBars />
+            </a>
+            <a className="background-mobile-menu" href="#" />
             <nav>
               <input
                 id="search-docs"
@@ -51,18 +60,25 @@ class Header extends React.Component {
                 placeholder="Search the docs..."
               />
               <a
-                href="http://docs.graphene-python.org/"
+                href="https://docs.graphene-python.org/"
                 className={`nav-link ${docs ? "nav-link-active" : ""}`}
               >
                 Documentation
               </a>
-              <Link
-                to="/team"
+              <a
+                href="/team"
                 className="nav-link"
                 activeClassName="nav-link-active"
               >
                 Team
-              </Link>
+              </a>
+              <a
+                href="/support"
+                className="nav-link"
+                activeClassName="nav-link-active"
+              >
+                Support Graphene
+              </a>
               <a
                 className="nav-link"
                 href="https://github.com/graphql-python/graphene"
@@ -83,6 +99,10 @@ class Header extends React.Component {
             font-size: 18px;
             color: #ffffff;
             letter-spacing: 0;
+          }
+          #menu {
+            position: absolute;
+            top: 0;
           }
           :global(.graphene-logo) {
             vertical-align: middle;
@@ -118,7 +138,7 @@ class Header extends React.Component {
             padding: 5px 5px 5px 29px;
             margin-top: -2px;
             vertical-align: middle;
-            font-size: 16px;
+            font-size: 14px;
             width: 180px;
             background: transparent;
             border: none;
@@ -128,6 +148,20 @@ class Header extends React.Component {
             background-position-y: center;
             background-position-x: 5px;
             border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+          }
+          .background-mobile-menu {
+            position: fixed;
+            z-index: 9999;
+            background: rgba(200, 200, 200, 0.3);
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            display: none;
+          }
+          .mobile-menu {
+            display: none;
+            color: black;
           }
           :global(#search-docs):focus {
             outline: none;
@@ -158,6 +192,7 @@ class Header extends React.Component {
           .navbar-header :global(.container) {
             display: flex;
             align-items: center;
+            height: 94px;
           }
 
           .navbar-header nav {
@@ -169,7 +204,7 @@ class Header extends React.Component {
             height: 100%;
             align-items: center;
             color: #555555;
-            font-size: 14px;
+            font-size: 13px;
             font-family: "Open Sans", sans-serif;
             font-weight: 600;
             height: 94px;
@@ -179,6 +214,58 @@ class Header extends React.Component {
             text-decoration: none;
             font-weight: 600;
             position: relative;
+          }
+          @media (max-width: 992px) {
+            :global(#search-docs) {
+              width: 120px;
+            }
+          }
+          @media (max-width: 768px) {
+            :global(#search-docs) {
+              display: none;
+            }
+            .mobile-menu {
+              display: block;
+              position: absolute;
+              right: 20px;
+              font-size: 20px;
+            }
+            .tagline .hide-mobile {
+              display: none;
+            }
+            .navbar-header nav {
+              height: auto;
+              position: fixed;
+              top: 0;
+              bottom: 0;
+              right: 0;
+              width: 280px;
+              display: block;
+              background: white;
+              z-index: 10000;
+              transform: translateX(305px);
+              box-shadow: 0px 2px 25px rgba(0, 0, 0, 0.15);
+              transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1);
+            }
+            .mobile-menu {
+              display: block;
+            }
+            #menu:target ~ .background-mobile-menu {
+              display: block;
+              cursor: default;
+            }
+            #menu:target ~ nav {
+              transform: translateX(0px);
+            }
+            .navbar-header :global(.nav-link) {
+              height: auto;
+              display: block;
+              width: 100%;
+              text-align: center;
+              padding: 0;
+              margin: 18px 0;
+              line-height: 20px;
+            }
           }
           :global(.nav-link-active) {
             color: black;
