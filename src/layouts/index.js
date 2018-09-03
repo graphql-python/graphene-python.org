@@ -8,19 +8,26 @@ import LogoOnWhite from "./logo-on-white.svg";
 import GrapheneLogoWhite from "./graphene-logo-white.svg";
 import { FaGithub, FaBars } from "react-icons/fa";
 
-import docsearch from "docsearch.js/dist/cdn/docsearch.min";
-
 import "docsearch.js/dist/cdn/docsearch.min.css";
 import "./index.css";
 
+let docsearch;
+if (typeof window !== "undefined") {
+  docsearch = require("docsearch.js/dist/cdn/docsearch.min");
+} else {
+  docsearch = false;
+}
+
 class Header extends React.Component {
   componentDidMount() {
-    // docsearch({
-    //   apiKey: "25626fae796133dc1e734c6bcaaeac3c",
-    //   inputSelector: "#search-docs",
-    //   indexName: "docsearch"
-    //   // debug: true
-    // });
+    // if (docsearch) {
+    //   docsearch({
+    //     apiKey: "25626fae796133dc1e734c6bcaaeac3c",
+    //     inputSelector: "#search-docs",
+    //     indexName: "docsearch"
+    //     // debug: true
+    //   });
+    // }
   }
   render() {
     let { docs } = this.props;
