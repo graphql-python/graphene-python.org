@@ -165,7 +165,7 @@ schema.<b>execute</b>('''
           padding: 140px 0;
         }
         .hero {
-          margin: 140px 0;
+          margin: 140px auto;
         }
       }
       section h1 {
