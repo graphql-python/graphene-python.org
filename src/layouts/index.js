@@ -11,23 +11,40 @@ import { FaGithub, FaBars } from "react-icons/fa";
 import "docsearch.js/dist/cdn/docsearch.min.css";
 import "./index.css";
 
+const SEARCH_DOCS = true;
+
 let docsearch;
-if (typeof window !== "undefined") {
+if (typeof window !== "undefined" && SEARCH_DOCS) {
   docsearch = require("docsearch.js/dist/cdn/docsearch.min");
 } else {
   docsearch = false;
 }
 
+const HeaderLink = ({ to, children, docs, ...extra }) => {
+  if (docs) {
+    return (
+      <a href={`https://graphene-python.org${to}`} {...extra}>
+        {children}
+      </a>
+    );
+  }
+  return (
+    <Link to={to} {...extra}>
+      {children}
+    </Link>
+  );
+};
+
 class Header extends React.Component {
   componentDidMount() {
-    // if (docsearch) {
-    //   docsearch({
-    //     apiKey: "25626fae796133dc1e734c6bcaaeac3c",
-    //     inputSelector: "#search-docs",
-    //     indexName: "docsearch"
-    //     // debug: true
-    //   });
-    // }
+    if (SEARCH_DOCS && docsearch) {
+      docsearch({
+        apiKey: "25626fae796133dc1e734c6bcaaeac3c",
+        inputSelector: "#search-docs",
+        indexName: "docsearch"
+        // debug: true
+      });
+    }
   }
   render() {
     let { docs } = this.props;
@@ -61,31 +78,35 @@ class Header extends React.Component {
             </a>
             <a className="background-mobile-menu" href="#" />
             <nav>
-              {/*<input
-                id="search-docs"
-                type="text"
-                placeholder="Search the docs..."
-              />*/}
+              {SEARCH_DOCS ? (
+                <input
+                  id="search-docs"
+                  type="text"
+                  placeholder="Search the docs..."
+                />
+              ) : null}
               <a
                 href="https://docs.graphene-python.org/"
                 className={`nav-link ${docs ? "nav-link-active" : ""}`}
               >
                 Documentation
               </a>
-              <a
-                href="/team"
+              <HeaderLink
+                to="/team"
+                docs={docs}
                 className="nav-link"
                 activeClassName="nav-link-active"
               >
                 Team
-              </a>
-              <a
-                href="/support"
+              </HeaderLink>
+              <HeaderLink
+                to="/support"
+                docs={docs}
                 className="nav-link"
                 activeClassName="nav-link-active"
               >
                 Support Graphene
-              </a>
+              </HeaderLink>
               <a
                 className="nav-link"
                 href="https://github.com/graphql-python/graphene"

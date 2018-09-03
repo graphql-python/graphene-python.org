@@ -179,7 +179,7 @@ schema.<b>execute</b>('''
       .sponsors {
         position: relative;
         z-index: 1000;
-        padding: 80px;
+        padding: 40px;
         text-align: center;
       }
       .sponsors:before {
