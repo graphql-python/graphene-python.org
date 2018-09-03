@@ -373,7 +373,7 @@ const members = [
     languages: ["es", "en"],
     work: "Creator @ Graphene",
     city: "San Francisco, US",
-    links: ["https://syrusakbary.com/", "https://www.patreon.com/graphene"]
+    links: ["https://syrusakbary.com/", "https://www.patreon.com/syrusakbary"]
   },
   {
     name: "Jonathan Kim",

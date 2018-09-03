@@ -34,6 +34,25 @@ const IndexPage = () => (
       </a>
     </div>
 
+    <section className="sponsors">
+      <div className="small-container">
+        <h2>Sponsors</h2>
+        <p>
+          Graphene is a collaboratively funded project. If you use Graphene
+          commercially we <b>strongly encourage you to invest</b> in its
+          continued development by <Link to="/support">
+            becoming a sponsor
+          </Link>.
+        </p>
+        <p>
+          Every single apportation helps us make Graphene long-term financially
+          sustainable.
+        </p>
+        <Link className="button primary" to="/support">
+          Become a Sponsor!
+        </Link>
+      </div>
+    </section>
     <section className="main">
       <div className="container">
         <div className="half">
@@ -157,6 +176,38 @@ schema.<b>execute</b>('''
         display: block;
         text-align: center;
       }
+      .sponsors {
+        position: relative;
+        z-index: 1000;
+        padding: 80px;
+        text-align: center;
+      }
+      .sponsors:before {
+        content: "";
+        display: block;
+        position: absolute;
+        transform: skew(0, -3deg);
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        z-index: -1;
+        background: #f6f6f6;
+        // background-image: linear-gradient(-183deg, #f67049 0%, #e14b2e 99%);
+      }
+      .sponsors :global(.button) {
+        margin-top: 20px;
+      }
+
+      .sponsors h2 {
+        color: #555;
+        font-weight: 200;
+      }
+      .sponsors p {
+        font-size: 14px;
+        color: #888;
+      }
+
       @media (min-width: 768px) {
         :global(.puzzle) {
           margin: 100px;
