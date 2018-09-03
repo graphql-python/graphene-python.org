@@ -5,6 +5,7 @@
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
     "@jacobmischka/gatsby-plugin-react-svg": "git+https://github.com/jacobmischka/gatsby-plugin-react-svg.git",
+    "docsearch.js": "^2.5.2",
     "gatsby": "^1.9.73",
     "gatsby-link": "^1.6.22",
     "gatsby-plugin-google-analytics": "^1.0.22",
@@ -15,6 +16,7 @@
     "postcss-import": "^11.0.0",
     "postcss-loader": "^2.0.8",
     "postcss-nested": "2.1.2",
+    "react-icons": "^3.0.5",
     "rucksack-css": "^1.0.2",
     "styled-jsx-plugin-postcss": "0.1.0"
   },
