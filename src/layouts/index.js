@@ -147,7 +147,7 @@ class Header extends React.Component {
             background-repeat: no-repeat;
             background-position-y: center;
             background-position-x: 5px;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
           }
           .background-mobile-menu {
             position: fixed;
@@ -165,7 +165,7 @@ class Header extends React.Component {
           }
           :global(#search-docs):focus {
             outline: none;
-            border-bottom-color: rgba(0, 0, 0, 0.8);
+            border-bottom-color: rgba(0, 0, 0, 0.6);
           }
           .navbar-header-contrast :global(#search-docs) {
             background-image: url("/search-white.svg");

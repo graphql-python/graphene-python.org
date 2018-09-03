@@ -102,19 +102,19 @@ schema.<b>execute</b>('''
             <ul>
               <li>
                 <b>Django</b>:{" "}
-                <a href="http://docs.graphene-python.org/projects/django/en/latest/">
+                <a href="https://docs.graphene-python.org/projects/django/en/latest/">
                   Graphene-Django
                 </a>
               </li>
               <li>
                 <b>SQLAlchemy</b>:{" "}
-                <a href="http://docs.graphene-python.org/projects/sqlalchemy/en/latest/">
+                <a href="https://docs.graphene-python.org/projects/sqlalchemy/en/latest/">
                   Graphene-SQLAlchemy
                 </a>
               </li>
               <li>
                 <b>Google App Engine</b>:{" "}
-                <a href="http://docs.graphene-python.org/projects/gae/en/latest/">
+                <a href="https://docs.graphene-python.org/projects/gae/en/latest/">
                   Graphene-GAE
                 </a>
               </li>
