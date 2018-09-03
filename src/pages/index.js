@@ -15,7 +15,7 @@ const onSelectorChange = () => {
 const IndexPage = () => (
   <div>
     <div className="hero container">
-      <FullLogoOnWhite />
+      <FullLogoOnWhite style={{ maxWidth: "100%" }} />
       <h1>
         GraphQL in{" "}
         <label className="hero-selector">
@@ -144,17 +144,29 @@ schema.<b>execute</b>('''
     <style jsx>{`
       /* Rectangle 5: */
       :global(.puzzle) {
-        margin: 100px;
+        margin: 20px auto;
+        display: block;
       }
       .main {
         position: relative;
-        padding: 140px 0;
+        padding: 80px 0;
         color: white;
       }
       .hero {
-        margin: 140px auto;
+        margin: 80px auto;
         display: block;
         text-align: center;
+      }
+      @media (min-width: 768px) {
+        :global(.puzzle) {
+          margin: 100px;
+        }
+        .main {
+          padding: 140px 0;
+        }
+        .hero {
+          margin: 140px 0;
+        }
       }
       section h1 {
         font-size: 36px;

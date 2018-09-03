@@ -31,8 +31,8 @@ const Support = () => {
         <h2>Recurring Pledges</h2>
         <p>
           Recurring pledges come with exclusive perks, e.g. having your name
-          listed in the Vue GitHub repository, or have your company logo placed
-          on this website.
+          listed in the Graphene GitHub repository, or have your company logo
+          placed on this website.
         </p>
         <ul>
           <li>
