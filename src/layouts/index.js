@@ -15,12 +15,12 @@ import "./index.css";
 
 class Header extends React.Component {
   componentDidMount() {
-    docsearch({
-      apiKey: "25626fae796133dc1e734c6bcaaeac3c",
-      inputSelector: "#search-docs",
-      indexName: "docsearch"
-      // debug: true
-    });
+    // docsearch({
+    //   apiKey: "25626fae796133dc1e734c6bcaaeac3c",
+    //   inputSelector: "#search-docs",
+    //   indexName: "docsearch"
+    //   // debug: true
+    // });
   }
   render() {
     let { docs } = this.props;
@@ -54,11 +54,11 @@ class Header extends React.Component {
             </a>
             <a className="background-mobile-menu" href="#" />
             <nav>
-              <input
+              {/*<input
                 id="search-docs"
                 type="text"
                 placeholder="Search the docs..."
-              />
+              />*/}
               <a
                 href="https://docs.graphene-python.org/"
                 className={`nav-link ${docs ? "nav-link-active" : ""}`}
@@ -72,13 +72,13 @@ class Header extends React.Component {
               >
                 Team
               </a>
-              <a
+              {/*<a
                 href="/support"
                 className="nav-link"
                 activeClassName="nav-link-active"
               >
                 Support Graphene
-              </a>
+              </a>*/}
               <a
                 className="nav-link"
                 href="https://github.com/graphql-python/graphene"
