@@ -16,7 +16,14 @@ const SEARCH_DOCS = true;
 let docsearch;
 if (typeof window !== "undefined" && SEARCH_DOCS) {
   docsearch = require("docsearch.js/dist/cdn/docsearch.min");
-  window.docsearch = docsearch;
+  try {
+    docsearch({
+      apiKey: "4b6d0afa80197db35886555b5ef4721f",
+      inputSelector: "#search-docs",
+      indexName: "graphene_python",
+      debug: false
+    });
+  } catch (e) {}
 } else {
   docsearch = false;
 }
@@ -343,7 +350,7 @@ class Header extends React.Component {
             content: "{% endraw %}";
           }
         `}</style>
-        <script
+        {/*<script
           type="text/javascript"
           dangerouslySetInnerHTML={{
             __html: `
@@ -355,7 +362,7 @@ docsearch({
 });
 `
           }}
-        />
+        />*/}
       </div>
     );
   }
