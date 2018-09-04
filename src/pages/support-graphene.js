@@ -38,7 +38,7 @@ const Support = () => {
         </p>
         <ul>
           <li>
-            <a href="https://www.patreon.com/graphene" target="_blank">
+            <a href="https://www.patreon.com/syrusakbary" target="_blank">
               Become a backer or sponsor via Patreon
             </a>{" "}
             (goes directly to support Syrus Akbary's full-time work on Graphene)

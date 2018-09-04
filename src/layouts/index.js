@@ -11,7 +11,7 @@ import { FaGithub, FaBars } from "react-icons/fa";
 import "docsearch.js/dist/cdn/docsearch.min.css";
 import "./index.css";
 
-const SEARCH_DOCS = false;
+const SEARCH_DOCS = true;
 
 let docsearch;
 if (typeof window !== "undefined" && SEARCH_DOCS) {
@@ -39,9 +39,9 @@ class Header extends React.Component {
   componentDidMount() {
     if (SEARCH_DOCS && docsearch) {
       docsearch({
-        apiKey: "25626fae796133dc1e734c6bcaaeac3c",
+        apiKey: "4b6d0afa80197db35886555b5ef4721f",
         inputSelector: "#search-docs",
-        indexName: "docsearch"
+        indexName: "graphene_python"
         // debug: true
       });
     }
@@ -118,6 +118,9 @@ class Header extends React.Component {
         </header>
 
         <style jsx>{`
+          .nonexisting {
+            content: "{% raw %}";
+          }
           .graphene-header {
             background: #000000;
             width: 100%;
@@ -335,6 +338,9 @@ class Header extends React.Component {
           }
 
           @import url("https://fonts.googleapis.com/css?family=Fira+Mono|Open+Sans:400,600");
+          .nonexisting {
+            content: "{% endraw %}";
+          }
         `}</style>
       </div>
     );
