@@ -9,6 +9,7 @@ import {
   FaTwitter
 } from "react-icons/fa";
 import paypal from "./support/paypal.png";
+import Sponsors from "./_sponsors";
 
 const Support = () => {
   return (
@@ -30,8 +31,9 @@ const Support = () => {
       <div>
         <h2>Recurring Pledges</h2>
         <p>
-          Recurring pledges come with exclusive perks, e.g. having your name
-          listed in the Graphene GitHub repository, or have your company logo
+          Recurring pledges come with <b>exclusive perks</b>, e.g. having your
+          name listed in the Graphene GitHub repository, or have your{" "}
+          <b>company logo</b>
           placed on this website.
         </p>
         <ul>
@@ -45,17 +47,18 @@ const Support = () => {
       </div>
       <div>
         <h2>Current Premium Sponsors: </h2>
+        <Sponsors active />
       </div>
       <p>
         Signing up for a paid plan will:
         <ul>
           <li>
-            Directly contribute to faster releases, more features, and higher
-            quality software.
+            Directly contribute to <b>faster releases, more features</b>, and
+            higher quality software.
           </li>
           <li>
-            Allow more time to be invested in documentation, issue triage, and
-            community support.
+            Allow more time to be invested in <b>documentation</b>, issue
+            triage, and community support.
           </li>
           <li>Safeguard the future development of Graphene.</li>
         </ul>

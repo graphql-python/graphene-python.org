@@ -11,7 +11,7 @@ import { FaGithub, FaBars } from "react-icons/fa";
 import "docsearch.js/dist/cdn/docsearch.min.css";
 import "./index.css";
 
-const SEARCH_DOCS = true;
+const SEARCH_DOCS = false;
 
 let docsearch;
 if (typeof window !== "undefined" && SEARCH_DOCS) {
@@ -69,9 +69,9 @@ class Header extends React.Component {
           className={`navbar-header  ${docs ? "navbar-header-contrast" : ""}`}
         >
           <div className="container">
-            <a href="https://graphene-python.org/" className="logo-link">
+            <HeaderLink to="/" className="logo-link">
               {docs ? <GrapheneLogoWhite /> : <LogoOnWhite />}
-            </a>
+            </HeaderLink>
             <a id="menu" />
             <a href="#menu" className="mobile-menu">
               <FaBars />
@@ -99,14 +99,14 @@ class Header extends React.Component {
               >
                 Team
               </HeaderLink>
-              <HeaderLink
-                to="/support"
+              {/*<HeaderLink
+                to="/support-graphene"
                 docs={docs}
                 className="nav-link"
                 activeClassName="nav-link-active"
               >
                 Support Graphene
-              </HeaderLink>
+              </HeaderLink>*/}
               <a
                 className="nav-link"
                 href="https://github.com/graphql-python/graphene"

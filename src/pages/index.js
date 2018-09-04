@@ -7,6 +7,8 @@ import TryLogo from "./logos/try.svg";
 import DailymotionLogo from "./logos/dailymotion.svg";
 import MozillaLogo from "./logos/mozilla.svg";
 import Puzzle from "./puzzle.svg";
+import Observer from "react-intersection-observer";
+import Sponsors from "./_sponsors";
 
 const onSelectorChange = () => {
   document.location = "http://graphene-js.org/";
@@ -35,23 +37,27 @@ const IndexPage = () => (
     </div>
 
     <section className="sponsors">
-      <div className="small-container">
-        <h2>Sponsors</h2>
-        <p>
-          Graphene is a collaboratively funded project. If you use Graphene
-          commercially we <b>strongly encourage you to invest</b> in its
-          continued development by <Link to="/support">
-            becoming a sponsor
-          </Link>.
-        </p>
-        <p>
-          Every single apportation helps us make Graphene long-term financially
-          sustainable.
-        </p>
-        <Link className="button" to="/support">
-          Become a Sponsor! 😊
-        </Link>
-      </div>
+      <Observer threshold={0.9}>
+        {({ inView, ref }) => (
+          <div className="small-container" ref={ref}>
+            <h2>Sponsors</h2>
+            <Sponsors active={inView} />
+            <p>
+              Graphene is a collaboratively funded project. If you use Graphene
+              commercially we <b>strongly encourage you to invest</b> in its
+              continued development by{" "}
+              <Link to="/support-graphene">becoming a sponsor</Link>.
+            </p>
+            <p>
+              Every single apportation helps us make Graphene long-term
+              financially sustainable.
+            </p>
+            <Link className="button" to="/support-graphene">
+              Become a Sponsor!
+            </Link>
+          </div>
+        )}
+      </Observer>
     </section>
     <section className="main">
       <div className="container">
@@ -172,14 +178,15 @@ schema.<b>execute</b>('''
         color: white;
       }
       .hero {
-        margin: 80px auto;
+        margin: 80px auto 60px;
         display: block;
         text-align: center;
       }
       .sponsors {
+        display: none;
         position: relative;
         z-index: 1000;
-        padding: 40px;
+        padding: 20px;
         text-align: center;
       }
       .sponsors:before {
@@ -197,6 +204,7 @@ schema.<b>execute</b>('''
       }
       .sponsors :global(.button) {
         margin-top: 20px;
+        margin-bottom: 30px;
       }
 
       .sponsors h2 {
@@ -216,7 +224,7 @@ schema.<b>execute</b>('''
           padding: 140px 0;
         }
         .hero {
-          margin: 140px auto;
+          margin: 140px auto 120px;
         }
       }
       section h1 {
