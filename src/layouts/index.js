@@ -208,7 +208,7 @@ class Header extends React.Component {
             border-bottom-color: rgba(0, 0, 0, 0.6);
           }
           .navbar-header-contrast :global(#search-docs) {
-            background-image: url("/search-white.svg");
+            background-image: url("https://graphene-python.org/search-white.svg");
             color: white;
             border-bottom-color: rgba(255, 255, 255, 0.5);
           }
