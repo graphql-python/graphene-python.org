@@ -366,19 +366,23 @@ class Header extends React.Component {
             content: "{% endraw %}";
           }
         `}</style>
-        {/*<script
+        <script
           type="text/javascript"
           dangerouslySetInnerHTML={{
             __html: `
-docsearch({
-  apiKey: "4b6d0afa80197db35886555b5ef4721f",
-  inputSelector: "#search-docs",
-  indexName: "graphene_python",
-  debug: false
-});
-`
+            docsearch({
+              apiKey: "4b6d0afa80197db35886555b5ef4721f",
+              inputSelector: "#search-docs",
+              indexName: "graphene_python",
+              transformData: function(suggestions) {
+                return suggestions.map(function(suggestion) {
+                  suggestion.url = suggestion.url.replace("http:", "https:");
+                  return suggestion;
+                });
+              }
+            });`
           }}
-        />*/}
+        />
       </div>
     );
   }
@@ -396,7 +400,7 @@ const TemplateWrapper = ({ children, ...otherProps }) => {
         ]}
       >
         <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js" />
-        <script>
+        {/*<script>
           {`
       docsearch({
         apiKey: "4b6d0afa80197db35886555b5ef4721f",
@@ -409,7 +413,7 @@ const TemplateWrapper = ({ children, ...otherProps }) => {
           });
         }
       });`}
-        </script>
+    </script>*/}
       </Helmet>
       <Header docs={docs} />
       <div>{children()}</div>
