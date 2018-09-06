@@ -28,7 +28,10 @@ const IndexPage = () => (
         </label>{" "}
         Made Easy
       </h1>
-      <a className="button primary" href="http://docs.graphene-python.org">
+      <a
+        className="button primary"
+        href="https://docs.graphene-python.org/en/latest/quickstart/"
+      >
         Get Started
       </a>
       <a className="button" href="https://pypi.python.org/pypi/graphene">
