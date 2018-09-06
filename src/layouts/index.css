@@ -43,9 +43,11 @@ h2 a,
 h3 a,
 h4 a,
 h5 a,
-h6 a {
+h6 a,
+.sphinxsidebar a {
   font-weight: normal;
 }
+
 @media (min-width: 768px) {
   .container {
     width: 750px;
