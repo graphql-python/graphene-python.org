@@ -13,20 +13,27 @@ import "./index.css";
 
 const SEARCH_DOCS = true;
 
-let docsearch;
-if (typeof window !== "undefined" && SEARCH_DOCS) {
-  docsearch = require("docsearch.js/dist/cdn/docsearch.min");
-  try {
-    docsearch({
-      apiKey: "4b6d0afa80197db35886555b5ef4721f",
-      inputSelector: "#search-docs",
-      indexName: "graphene_python",
-      debug: false
-    });
-  } catch (e) {}
-} else {
-  docsearch = false;
-}
+// let docsearch;
+// if (typeof window !== "undefined" && SEARCH_DOCS) {
+//   docsearch = require("docsearch.js/dist/cdn/docsearch.min");
+//   try {
+//     docsearch({
+//       apiKey: "4b6d0afa80197db35886555b5ef4721f",
+//       inputSelector: "#search-docs",
+//       indexName: "graphene_python",
+//       transformData: function(suggestions) {
+//         return suggestions.map(function(suggestion) {
+//           suggestion.url.replace("http:", "https:");
+//           return suggestion;
+//         });
+//       },
+//       // "start_urls": ["https://www.example.com/docs"],
+//       debug: false
+//     });
+//   } catch (e) {}
+// } else {
+//   docsearch = false;
+// }
 
 const HeaderLink = ({ to, children, docs, ...extra }) => {
   if (docs) {
@@ -45,14 +52,23 @@ const HeaderLink = ({ to, children, docs, ...extra }) => {
 
 class Header extends React.Component {
   componentDidMount() {
-    if (SEARCH_DOCS && docsearch) {
-      docsearch({
-        apiKey: "4b6d0afa80197db35886555b5ef4721f",
-        inputSelector: "#search-docs",
-        indexName: "graphene_python"
-        // debug: true
-      });
-    }
+    try {
+      if (SEARCH_DOCS && typeof window !== "undefined") {
+        let docsearch = require("docsearch.js/dist/cdn/docsearch.min");
+        docsearch({
+          apiKey: "4b6d0afa80197db35886555b5ef4721f",
+          inputSelector: "#search-docs",
+          indexName: "graphene_python",
+          transformData: function(suggestions) {
+            return suggestions.map(function(suggestion) {
+              suggestion.url = suggestion.url.replace("http:", "https:");
+              return suggestion;
+            });
+          }
+          // debug: true
+        });
+      }
+    } catch (e) {}
   }
   render() {
     let { docs } = this.props;
@@ -378,7 +394,25 @@ const TemplateWrapper = ({ children, ...otherProps }) => {
           { name: "description", content: "Graphene framework for Python" },
           { name: "keywords", content: "graphene, graphql, python, framework" }
         ]}
-      />
+      >
+        <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+      docsearch({
+        apiKey: "4b6d0afa80197db35886555b5ef4721f",
+        inputSelector: "#search-docs",
+        indexName: "graphene_python",
+        transformData: function(suggestions) {
+          return suggestions.map(function(suggestion) {
+            suggestion.url = suggestion.url.replace("http:", "https:");
+            return suggestion;
+          });
+        }
+      });`
+          }}
+        />
+      </Helmet>
       <Header docs={docs} />
       <div>{children()}</div>
     </div>
