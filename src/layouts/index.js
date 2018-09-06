@@ -396,9 +396,8 @@ const TemplateWrapper = ({ children, ...otherProps }) => {
         ]}
       >
         <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js" />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
+        <script>
+          {`
       docsearch({
         apiKey: "4b6d0afa80197db35886555b5ef4721f",
         inputSelector: "#search-docs",
@@ -409,9 +408,8 @@ const TemplateWrapper = ({ children, ...otherProps }) => {
             return suggestion;
           });
         }
-      });`
-          }}
-        />
+      });`}
+        </script>
       </Helmet>
       <Header docs={docs} />
       <div>{children()}</div>
