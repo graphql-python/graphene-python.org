@@ -186,7 +186,7 @@ schema.<b>execute</b>('''
         text-align: center;
       }
       .sponsors {
-        display: none;
+        display: block;
         position: relative;
         z-index: 1000;
         padding: 20px;

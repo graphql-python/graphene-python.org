@@ -123,14 +123,14 @@ class Header extends React.Component {
               >
                 Team
               </HeaderLink>
-              {/*<HeaderLink
+              <HeaderLink
                 to="/support-graphene"
                 docs={docs}
                 className="nav-link"
                 activeClassName="nav-link-active"
               >
                 Support Graphene
-              </HeaderLink>*/}
+              </HeaderLink>
               <a
                 className="nav-link"
                 href="https://github.com/graphql-python/graphene"
