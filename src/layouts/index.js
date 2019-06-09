@@ -74,21 +74,6 @@ class Header extends React.Component {
     let { docs } = this.props;
     return (
       <div>
-        <header className="graphene-header">
-          <div className="container">
-            <a href="https://graphene-python.org/">
-              <GrapheneLogo className="graphene-logo" />
-            </a>
-            <a className="tagline" href="//graphene.tools/">
-              Learn{" "}
-              <span className="hide-mobile">
-                how Graphene-Python fits into
-              </span>{" "}
-              the <b>Graphene family</b>
-              <Arrow className="arrow" />
-            </a>
-          </div>
-        </header>
         <header
           className={`navbar-header  ${docs ? "navbar-header-contrast" : ""}`}
         >

@@ -10,24 +10,11 @@ import Puzzle from "./puzzle.svg";
 import Observer from "react-intersection-observer";
 import Sponsors from "./_sponsors";
 
-const onSelectorChange = () => {
-  document.location = "http://graphene-js.org/";
-};
-
 const IndexPage = () => (
   <div>
     <div className="hero container">
       <FullLogoOnWhite style={{ maxWidth: "100%" }} />
-      <h1>
-        GraphQL in{" "}
-        <label className="hero-selector">
-          <select onChange={onSelectorChange}>
-            <option selected>Python</option>
-            <option>Javascript</option>
-          </select>
-        </label>{" "}
-        Made Easy
-      </h1>
+      <h1>GraphQL in Python Made Easy</h1>
       <a
         className="button primary"
         href="https://docs.graphene-python.org/en/latest/quickstart/"
