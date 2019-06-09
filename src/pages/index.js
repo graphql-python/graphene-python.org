@@ -39,29 +39,6 @@ const IndexPage = () => (
       </a>
     </div>
 
-    <section className="sponsors">
-      <Observer threshold={0.9}>
-        {({ inView, ref }) => (
-          <div className="small-container" ref={ref}>
-            <h2>Sponsors</h2>
-            <Sponsors active={inView} />
-            <p>
-              Graphene is a collaboratively funded project. If you use Graphene
-              commercially we <b>strongly encourage you to invest</b> in its
-              continued development by{" "}
-              <Link to="/support-graphene">becoming a sponsor</Link>.
-            </p>
-            <p>
-              Every single apportation helps us make Graphene long-term
-              financially sustainable.
-            </p>
-            <Link className="button" to="/support-graphene">
-              Become a Sponsor!
-            </Link>
-          </div>
-        )}
-      </Observer>
-    </section>
     <section className="main">
       <div className="container">
         <div className="half">
@@ -126,7 +103,9 @@ schema.<b>execute</b>('''
 
           <p>
             We offer integrations with different frameworks that will get you up
-            to speed in the blink of an eye.<br />This integrations include:
+            to speed in the blink of an eye.
+            <br />
+            This integrations include:
             <ul>
               <li>
                 <b>Django</b>:{" "}
