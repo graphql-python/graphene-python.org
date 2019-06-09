@@ -22,13 +22,6 @@ const Docs = () => {
             </h3>
             <div className="sphinxsidebarwrapperlinks">{`{{ toctree() }}`}</div>
           </div>
-          <div className="graphene-jobs">
-            <h3 className="callout">Jobs</h3>
-            <iframe
-              src="https://graphql.works/widget"
-              className="graphene-jobs-iframe"
-            />
-          </div>
         </div>{" "}
       </div>
       <div className="docs-main">
