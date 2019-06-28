@@ -21,6 +21,9 @@ const Docs = () => {
               <a href="{{ pathto(master_doc) }}">Table Of Contents</a>
             </h3>
             <div className="sphinxsidebarwrapperlinks">{`{{ toctree() }}`}</div>
+            <a href="https://readthedocs.org/projects/graphene-python/versions/">
+              Older versions
+            </a>
           </div>
         </div>{" "}
       </div>
