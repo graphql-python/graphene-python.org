@@ -8,7 +8,6 @@ import DailymotionLogo from "./logos/dailymotion.svg";
 import MozillaLogo from "./logos/mozilla.svg";
 import Puzzle from "./puzzle.svg";
 import Observer from "react-intersection-observer";
-import Sponsors from "./_sponsors";
 
 const IndexPage = () => (
   <div>
@@ -150,39 +149,6 @@ schema.<b>execute</b>('''
         margin: 80px auto 60px;
         display: block;
         text-align: center;
-      }
-      .sponsors {
-        display: block;
-        position: relative;
-        z-index: 1000;
-        padding: 20px;
-        text-align: center;
-      }
-      .sponsors:before {
-        content: "";
-        display: block;
-        position: absolute;
-        transform: skew(0, -3deg);
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        z-index: -1;
-        background: #f6f6f6;
-        // background-image: linear-gradient(-183deg, #f67049 0%, #e14b2e 99%);
-      }
-      .sponsors :global(.button) {
-        margin-top: 20px;
-        margin-bottom: 30px;
-      }
-
-      .sponsors h2 {
-        color: #555;
-        font-weight: 400;
-      }
-      .sponsors p {
-        font-size: 14px;
-        color: #888;
       }
 
       @media (min-width: 768px) {
