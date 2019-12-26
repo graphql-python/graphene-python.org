@@ -56,6 +56,9 @@ p {
 .documentwrapper h4 {
   font-size: 22px;
 }
+.documentwrapper h5 {
+  font-size: 22px;
+}
 .headerlink {
   display: none;
 }
