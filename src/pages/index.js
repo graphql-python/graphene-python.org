@@ -83,7 +83,7 @@ schema.<b>execute</b>('''
             Graphene-Python will work out of the box with your current stack.
           </p>
           <p>
-            For being able to have a fast development process, is essential to
+            For being able to have a fast development process, it is essential to
             reuse as much code as possible.
           </p>
 
@@ -91,7 +91,7 @@ schema.<b>execute</b>('''
             We offer integrations with different frameworks that will get you up
             to speed in the blink of an eye.
             <br />
-            This integrations include:
+            These integrations include:
             <ul>
               <li>
                 <b>Django</b>:{" "}
