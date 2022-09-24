@@ -427,6 +427,16 @@ const members = [
     reposOfficial: ["graphene", "graphene-gae"],
     languages: ["en"],
     links: ["http://www.developerzen.com"]
+  },
+  {
+    name: "Firas Kafri",
+    twitter: "fkafri",
+    github: "firaskafri",
+    city: "Amman Jordan",
+    work: "Head of Products @ Salalem",
+    reposOfficial: ["graphene", "graphene-django"],
+    languages: ["en", "ar"],
+    links: ["http://www.salalem.com"]
   }
 ];
 const languageNames = {
