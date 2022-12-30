@@ -7,7 +7,7 @@
     "@jacobmischka/gatsby-plugin-react-svg":
       "git+https://github.com/jacobmischka/gatsby-plugin-react-svg.git",
     "docsearch.js": "^2.5.2",
-    "gatsby": "^1.9.73",
+    "gatsby": "^5.3.3",
     "gatsby-link": "^1.6.22",
     "gatsby-plugin-google-analytics": "^1.0.22",
     "gatsby-plugin-react-helmet": "^1.0.8",
