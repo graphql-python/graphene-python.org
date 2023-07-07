@@ -453,7 +453,7 @@ const Team = () => {
       <h1>Meet the Team</h1>
       <p>
         The development of Graphene and its ecosystem is guided by an
-        international team, some of whom have chosen to be featured below.
+        international team of contributors, some of whom have chosen to be featured below.
       </p>
       {members.map(member => <Member key={member.name} {...member} />)}
     </div>
