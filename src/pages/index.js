@@ -32,8 +32,8 @@ const IndexPage = () => (
           <h1>Simple yet Powerful</h1>
           <p>
             Graphene-Python is a library for building GraphQL APIs in Python
-            easily, its main goal is to provide a simple but extendable API for
-            making developers' lives easier.
+            easily, its main goal is to provide a simple but extendable API to
+            make developers' lives easier.
           </p>
           <p>
             But, what is GraphQL? GraphQL is a data query language developed
@@ -83,15 +83,14 @@ schema.<b>execute</b>('''
             Graphene-Python will work out of the box with your current stack.
           </p>
           <p>
-            For being able to have a fast development process, is essential to
-            reuse as much code as possible.
+            It is essential to ruse as much code as possible to enable a fast development process/
           </p>
 
           <p>
             We offer integrations with different frameworks that will get you up
             to speed in the blink of an eye.
             <br />
-            This integrations include:
+            These integrations include:
             <ul>
               <li>
                 <b>Django</b>:{" "}
@@ -123,7 +122,7 @@ schema.<b>execute</b>('''
         <p>
           Graphene is trusted by thousands of individual developers and
           companies everyday. Here are just a few of the organizations that
-          choose Graphene to use GraphQL in their stacks.
+          choose Graphene to integrate GraphQL in their stacks.
         </p>
         <div className="logos">
           <YelpLogo />
